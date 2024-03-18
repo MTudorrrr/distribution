@@ -18,7 +18,7 @@ import (
 // BlobUploadDispatcher constructs and returns the blob upload handler for the
 // given request context.
 func BlobUploadDispatcher(ctx *Context, r *http.Request) http.Handler {
-	buh := &blobUploadHandler{
+	buh := &BlobUploadHandler{
 		Context: ctx,
 		UUID:    getUploadUUID(ctx),
 	}
@@ -48,8 +48,8 @@ func BlobUploadDispatcher(ctx *Context, r *http.Request) http.Handler {
 	return handler
 }
 
-// blobUploadHandler handles the http blob upload process.
-type blobUploadHandler struct {
+// BlobUploadHandler handles the http blob upload process.
+type BlobUploadHandler struct {
 	*Context
 
 	// UUID identifies the upload instance for the current request. Using UUID
@@ -63,7 +63,7 @@ type blobUploadHandler struct {
 
 // StartBlobUpload begins the blob upload process and allocates a server-side
 // blob writer session, optionally mounting the blob from a separate repository.
-func (buh *blobUploadHandler) StartBlobUpload(w http.ResponseWriter, r *http.Request) {
+func (buh *BlobUploadHandler) StartBlobUpload(w http.ResponseWriter, r *http.Request) {
 	var options []distribution.BlobCreateOption
 
 	fromRepo := r.FormValue("from")
@@ -103,7 +103,7 @@ func (buh *blobUploadHandler) StartBlobUpload(w http.ResponseWriter, r *http.Req
 }
 
 // GetUploadStatus returns the status of a given upload, identified by id.
-func (buh *blobUploadHandler) GetUploadStatus(w http.ResponseWriter, r *http.Request) {
+func (buh *BlobUploadHandler) GetUploadStatus(w http.ResponseWriter, r *http.Request) {
 	if buh.Upload == nil {
 		blobs := buh.Repository.Blobs(buh)
 		upload, err := blobs.Resume(buh, buh.UUID)
@@ -128,7 +128,7 @@ func (buh *blobUploadHandler) GetUploadStatus(w http.ResponseWriter, r *http.Req
 }
 
 // PatchBlobData writes data to an upload.
-func (buh *blobUploadHandler) PatchBlobData(w http.ResponseWriter, r *http.Request) {
+func (buh *BlobUploadHandler) PatchBlobData(w http.ResponseWriter, r *http.Request) {
 	if buh.Upload == nil {
 		buh.Errors = append(buh.Errors, errcode.ErrorCodeBlobUploadUnknown)
 		return
@@ -183,7 +183,7 @@ func (buh *blobUploadHandler) PatchBlobData(w http.ResponseWriter, r *http.Reque
 // provided is received and verified. If successful, the blob is linked
 // into the blob store and 201 Created is returned with the canonical
 // url of the blob.
-func (buh *blobUploadHandler) PutBlobUploadComplete(w http.ResponseWriter, r *http.Request) {
+func (buh *BlobUploadHandler) PutBlobUploadComplete(w http.ResponseWriter, r *http.Request) {
 	if buh.Upload == nil {
 		buh.Errors = append(buh.Errors, errcode.ErrorCodeBlobUploadUnknown)
 		return
@@ -253,7 +253,7 @@ func (buh *blobUploadHandler) PutBlobUploadComplete(w http.ResponseWriter, r *ht
 }
 
 // CancelBlobUpload cancels an in-progress upload of a blob.
-func (buh *blobUploadHandler) CancelBlobUpload(w http.ResponseWriter, r *http.Request) {
+func (buh *BlobUploadHandler) CancelBlobUpload(w http.ResponseWriter, r *http.Request) {
 	if buh.Upload == nil {
 		buh.Errors = append(buh.Errors, errcode.ErrorCodeBlobUploadUnknown)
 		return
@@ -269,7 +269,7 @@ func (buh *blobUploadHandler) CancelBlobUpload(w http.ResponseWriter, r *http.Re
 	w.WriteHeader(http.StatusNoContent)
 }
 
-func (buh *blobUploadHandler) ResumeBlobUpload(ctx *Context, r *http.Request) http.Handler {
+func (buh *BlobUploadHandler) ResumeBlobUpload(ctx *Context, r *http.Request) http.Handler {
 	state, err := hmacKey(ctx.Config.HTTP.Secret).unpackUploadState(r.FormValue("_state"))
 	if err != nil {
 		return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
@@ -321,7 +321,7 @@ func (buh *blobUploadHandler) ResumeBlobUpload(ctx *Context, r *http.Request) ht
 // blobUploadResponse provides a standard request for uploading blobs and
 // chunk responses. This sets the correct headers but the response status is
 // left to the caller.
-func (buh *blobUploadHandler) blobUploadResponse(w http.ResponseWriter, r *http.Request) error {
+func (buh *BlobUploadHandler) blobUploadResponse(w http.ResponseWriter, r *http.Request) error {
 	// TODO(stevvooe): Need a better way to manage the upload state automatically.
 	buh.State.Name = buh.Repository.Named().Name()
 	buh.State.UUID = buh.Upload.ID()
@@ -362,7 +362,7 @@ func (buh *blobUploadHandler) blobUploadResponse(w http.ResponseWriter, r *http.
 // mountBlob attempts to mount a blob from another repository by its digest. If
 // successful, the blob is linked into the blob store and 201 Created is
 // returned with the canonical url of the blob.
-func (buh *blobUploadHandler) createBlobMountOption(fromRepo, mountDigest string) (distribution.BlobCreateOption, error) {
+func (buh *BlobUploadHandler) createBlobMountOption(fromRepo, mountDigest string) (distribution.BlobCreateOption, error) {
 	dgst, err := digest.Parse(mountDigest)
 	if err != nil {
 		return nil, err
@@ -384,7 +384,7 @@ func (buh *blobUploadHandler) createBlobMountOption(fromRepo, mountDigest string
 // writeBlobCreatedHeaders writes the standard headers describing a newly
 // created blob. A 201 Created is written as well as the canonical URL and
 // blob digest.
-func (buh *blobUploadHandler) writeBlobCreatedHeaders(w http.ResponseWriter, desc distribution.Descriptor) error {
+func (buh *BlobUploadHandler) writeBlobCreatedHeaders(w http.ResponseWriter, desc distribution.Descriptor) error {
 	ref, err := reference.WithDigest(buh.Repository.Named(), desc.Digest)
 	if err != nil {
 		return err
