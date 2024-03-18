@@ -2242,8 +2242,8 @@ See the changelog below for full list of changes.
   * [`907e7be5`](https://github.com/distribution/distribution/commit/907e7be5450b10a9ebb9270adb7ac9ba5d6a9909) Bump Logstash hook for logrus to `v1.0.0`.
 * Add Codecov badge ([#3362](https://github.com/distribution/distribution/pull/3362))
   * [`c95293bb`](https://github.com/distribution/distribution/commit/c95293bbdf78ddacb2a06e0df6e7829584cd1711) Add Codecov badge
-* go.mod: change imports to github.com/distribution/distribution/v3 ([#3225](https://github.com/distribution/distribution/pull/3225))
-  * [`1d338749`](https://github.com/distribution/distribution/commit/1d33874951b749df7e070b1c702ea418bbc57ed1) go.mod: change imports to github.com/distribution/distribution/v3
+* go.mod: change imports to github.com/MTudorrrr/distribution ([#3225](https://github.com/distribution/distribution/pull/3225))
+  * [`1d338749`](https://github.com/distribution/distribution/commit/1d33874951b749df7e070b1c702ea418bbc57ed1) go.mod: change imports to github.com/MTudorrrr/distribution
 * Relax filesystem driver folder permissions to 0777 (cont) ([#3204](https://github.com/distribution/distribution/pull/3204))
   * [`2672c0eb`](https://github.com/distribution/distribution/commit/2672c0ebe2900bc1df1622a2ae4f36c61bac35e8) Relax filesystem driver folder permissions to 0777 (cont)
 * Update repo normalize error message to include the name of the repo. ([#3265](https://github.com/distribution/distribution/pull/3265))

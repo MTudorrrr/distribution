@@ -3,8 +3,8 @@ package tracing
 import (
 	"context"
 
-	"github.com/distribution/distribution/v3/internal/dcontext"
-	"github.com/distribution/distribution/v3/version"
+	"github.com/MTudorrrr/distribution/internal/dcontext"
+	"github.com/MTudorrrr/distribution/version"
 	"go.opentelemetry.io/contrib/exporters/autoexport"
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/exporters/stdout/stdouttrace"

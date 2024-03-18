@@ -6,10 +6,10 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/distribution/distribution/v3"
-	"github.com/distribution/distribution/v3/manifest"
-	"github.com/distribution/distribution/v3/manifest/ocischema"
-	"github.com/distribution/distribution/v3/registry/storage/driver/inmemory"
+	"github.com/MTudorrrr/distribution"
+	"github.com/MTudorrrr/distribution/manifest"
+	"github.com/MTudorrrr/distribution/manifest/ocischema"
+	"github.com/MTudorrrr/distribution/registry/storage/driver/inmemory"
 	"github.com/opencontainers/go-digest"
 	v1 "github.com/opencontainers/image-spec/specs-go/v1"
 )

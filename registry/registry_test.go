@@ -24,9 +24,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/distribution/distribution/v3/configuration"
-	"github.com/distribution/distribution/v3/internal/dcontext"
-	_ "github.com/distribution/distribution/v3/registry/storage/driver/inmemory"
+	"github.com/MTudorrrr/distribution/configuration"
+	"github.com/MTudorrrr/distribution/internal/dcontext"
+	_ "github.com/MTudorrrr/distribution/registry/storage/driver/inmemory"
 	"github.com/sirupsen/logrus"
 	"gopkg.in/yaml.v2"
 )

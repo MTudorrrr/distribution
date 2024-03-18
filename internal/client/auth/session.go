@@ -11,9 +11,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/distribution/distribution/v3/internal/client"
-	"github.com/distribution/distribution/v3/internal/client/auth/challenge"
-	"github.com/distribution/distribution/v3/internal/client/transport"
+	"github.com/MTudorrrr/distribution/internal/client"
+	"github.com/MTudorrrr/distribution/internal/client/auth/challenge"
+	"github.com/MTudorrrr/distribution/internal/client/transport"
 )
 
 var (

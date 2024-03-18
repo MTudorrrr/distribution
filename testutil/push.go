@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/distribution/distribution/v3"
+	"github.com/MTudorrrr/distribution"
 	"github.com/opencontainers/go-digest"
 )
 

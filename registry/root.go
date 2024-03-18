@@ -4,10 +4,10 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/distribution/distribution/v3/internal/dcontext"
-	"github.com/distribution/distribution/v3/registry/storage"
-	"github.com/distribution/distribution/v3/registry/storage/driver/factory"
-	"github.com/distribution/distribution/v3/version"
+	"github.com/MTudorrrr/distribution/internal/dcontext"
+	"github.com/MTudorrrr/distribution/registry/storage"
+	"github.com/MTudorrrr/distribution/registry/storage/driver/factory"
+	"github.com/MTudorrrr/distribution/version"
 	"github.com/spf13/cobra"
 )
 

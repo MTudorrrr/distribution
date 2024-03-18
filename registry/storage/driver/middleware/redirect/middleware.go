@@ -7,8 +7,8 @@ import (
 	"net/url"
 	"path"
 
-	storagedriver "github.com/distribution/distribution/v3/registry/storage/driver"
-	storagemiddleware "github.com/distribution/distribution/v3/registry/storage/driver/middleware"
+	storagedriver "github.com/MTudorrrr/distribution/registry/storage/driver"
+	storagemiddleware "github.com/MTudorrrr/distribution/registry/storage/driver/middleware"
 	"github.com/sirupsen/logrus"
 )
 

@@ -9,9 +9,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/distribution/distribution/v3/internal/client/auth/challenge"
-	"github.com/distribution/distribution/v3/internal/client/transport"
-	"github.com/distribution/distribution/v3/testutil"
+	"github.com/MTudorrrr/distribution/internal/client/auth/challenge"
+	"github.com/MTudorrrr/distribution/internal/client/transport"
+	"github.com/MTudorrrr/distribution/testutil"
 )
 
 // An implementation of clock for providing fake time data.

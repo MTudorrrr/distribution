@@ -5,9 +5,9 @@ import (
 	"io"
 	"path"
 
-	"github.com/distribution/distribution/v3"
-	"github.com/distribution/distribution/v3/internal/dcontext"
-	"github.com/distribution/distribution/v3/registry/storage/driver"
+	"github.com/MTudorrrr/distribution"
+	"github.com/MTudorrrr/distribution/internal/dcontext"
+	"github.com/MTudorrrr/distribution/registry/storage/driver"
 	"github.com/opencontainers/go-digest"
 )
 

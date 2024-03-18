@@ -4,8 +4,8 @@ import (
 	"context"
 	"errors"
 
-	"github.com/distribution/distribution/v3"
-	"github.com/distribution/distribution/v3/manifest"
+	"github.com/MTudorrrr/distribution"
+	"github.com/MTudorrrr/distribution/manifest"
 	"github.com/opencontainers/go-digest"
 	v1 "github.com/opencontainers/image-spec/specs-go/v1"
 )

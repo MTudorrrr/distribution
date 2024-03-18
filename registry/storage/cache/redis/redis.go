@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/distribution/distribution/v3"
-	"github.com/distribution/distribution/v3/registry/storage/cache"
-	"github.com/distribution/distribution/v3/registry/storage/cache/metrics"
+	"github.com/MTudorrrr/distribution"
+	"github.com/MTudorrrr/distribution/registry/storage/cache"
+	"github.com/MTudorrrr/distribution/registry/storage/cache/metrics"
 	"github.com/distribution/reference"
 	"github.com/opencontainers/go-digest"
 	"github.com/redis/go-redis/v9"

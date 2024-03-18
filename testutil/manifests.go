@@ -3,10 +3,10 @@ package testutil
 import (
 	"fmt"
 
-	"github.com/distribution/distribution/v3"
-	"github.com/distribution/distribution/v3/internal/dcontext"
-	"github.com/distribution/distribution/v3/manifest/manifestlist"
-	"github.com/distribution/distribution/v3/manifest/schema2"
+	"github.com/MTudorrrr/distribution"
+	"github.com/MTudorrrr/distribution/internal/dcontext"
+	"github.com/MTudorrrr/distribution/manifest/manifestlist"
+	"github.com/MTudorrrr/distribution/manifest/schema2"
 	"github.com/opencontainers/go-digest"
 )
 

@@ -5,7 +5,7 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/distribution/distribution/v3"
+	"github.com/MTudorrrr/distribution"
 	digest "github.com/opencontainers/go-digest"
 )
 

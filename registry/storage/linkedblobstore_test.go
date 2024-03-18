@@ -9,8 +9,8 @@ import (
 	"strconv"
 	"testing"
 
-	"github.com/distribution/distribution/v3"
-	"github.com/distribution/distribution/v3/testutil"
+	"github.com/MTudorrrr/distribution"
+	"github.com/MTudorrrr/distribution/testutil"
 	"github.com/distribution/reference"
 	"github.com/opencontainers/go-digest"
 )

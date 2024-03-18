@@ -9,8 +9,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/distribution/distribution/v3/internal/dcontext"
-	"github.com/distribution/distribution/v3/registry/api/errcode"
+	"github.com/MTudorrrr/distribution/internal/dcontext"
+	"github.com/MTudorrrr/distribution/registry/api/errcode"
 )
 
 // Registers global /debug/health api endpoint, creates default registry

@@ -13,10 +13,10 @@ import (
 	"strings"
 	"time"
 
+	"github.com/MTudorrrr/distribution/internal/dcontext"
+	storagedriver "github.com/MTudorrrr/distribution/registry/storage/driver"
+	storagemiddleware "github.com/MTudorrrr/distribution/registry/storage/driver/middleware"
 	"github.com/aws/aws-sdk-go/service/cloudfront/sign"
-	"github.com/distribution/distribution/v3/internal/dcontext"
-	storagedriver "github.com/distribution/distribution/v3/registry/storage/driver"
-	storagemiddleware "github.com/distribution/distribution/v3/registry/storage/driver/middleware"
 	"github.com/sirupsen/logrus"
 )
 

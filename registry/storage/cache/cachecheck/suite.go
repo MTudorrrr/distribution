@@ -5,8 +5,8 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/distribution/distribution/v3"
-	"github.com/distribution/distribution/v3/registry/storage/cache"
+	"github.com/MTudorrrr/distribution"
+	"github.com/MTudorrrr/distribution/registry/storage/cache"
 	"github.com/opencontainers/go-digest"
 )
 

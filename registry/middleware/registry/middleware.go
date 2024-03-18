@@ -4,9 +4,9 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/distribution/distribution/v3"
-	"github.com/distribution/distribution/v3/registry/storage"
-	storagedriver "github.com/distribution/distribution/v3/registry/storage/driver"
+	"github.com/MTudorrrr/distribution"
+	"github.com/MTudorrrr/distribution/registry/storage"
+	storagedriver "github.com/MTudorrrr/distribution/registry/storage/driver"
 )
 
 // InitFunc is the type of a RegistryMiddleware factory function and is

@@ -5,9 +5,9 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/distribution/distribution/v3"
+	"github.com/MTudorrrr/distribution"
 
-	"github.com/distribution/distribution/v3/internal/dcontext"
+	"github.com/MTudorrrr/distribution/internal/dcontext"
 	"github.com/distribution/reference"
 	"github.com/opencontainers/go-digest"
 )

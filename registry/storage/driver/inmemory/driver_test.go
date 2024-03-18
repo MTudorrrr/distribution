@@ -3,8 +3,8 @@ package inmemory
 import (
 	"testing"
 
-	storagedriver "github.com/distribution/distribution/v3/registry/storage/driver"
-	"github.com/distribution/distribution/v3/registry/storage/driver/testsuites"
+	storagedriver "github.com/MTudorrrr/distribution/registry/storage/driver"
+	"github.com/MTudorrrr/distribution/registry/storage/driver/testsuites"
 )
 
 func newDriverConstructor() (storagedriver.StorageDriver, error) {

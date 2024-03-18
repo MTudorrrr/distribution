@@ -3,9 +3,9 @@ package storage
 import (
 	"context"
 
-	"github.com/distribution/distribution/v3"
-	"github.com/distribution/distribution/v3/internal/dcontext"
-	"github.com/distribution/distribution/v3/manifest/ocischema"
+	"github.com/MTudorrrr/distribution"
+	"github.com/MTudorrrr/distribution/internal/dcontext"
+	"github.com/MTudorrrr/distribution/manifest/ocischema"
 	"github.com/opencontainers/go-digest"
 )
 

@@ -8,7 +8,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/distribution/distribution/v3/registry/auth"
+	"github.com/MTudorrrr/distribution/registry/auth"
 )
 
 func TestBasicAccessController(t *testing.T) {

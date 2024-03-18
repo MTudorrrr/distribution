@@ -9,8 +9,8 @@ import (
 	mrand "math/rand"
 	"time"
 
-	"github.com/distribution/distribution/v3"
-	"github.com/distribution/distribution/v3/internal/dcontext"
+	"github.com/MTudorrrr/distribution"
+	"github.com/MTudorrrr/distribution/internal/dcontext"
 	"github.com/opencontainers/go-digest"
 )
 

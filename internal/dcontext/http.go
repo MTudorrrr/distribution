@@ -8,7 +8,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/distribution/distribution/v3/internal/requestutil"
+	"github.com/MTudorrrr/distribution/internal/requestutil"
 	"github.com/google/uuid"
 	"github.com/gorilla/mux"
 )

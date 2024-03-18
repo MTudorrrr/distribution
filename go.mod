@@ -1,4 +1,4 @@
-module github.com/distribution/distribution/v3
+module github.com/MTudorrrr/distribution
 
 go 1.20
 
