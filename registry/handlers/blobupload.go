@@ -15,9 +15,9 @@ import (
 	"github.com/opencontainers/go-digest"
 )
 
-// blobUploadDispatcher constructs and returns the blob upload handler for the
+// BlobUploadDispatcher constructs and returns the blob upload handler for the
 // given request context.
-func blobUploadDispatcher(ctx *Context, r *http.Request) http.Handler {
+func BlobUploadDispatcher(ctx *Context, r *http.Request) http.Handler {
 	buh := &blobUploadHandler{
 		Context: ctx,
 		UUID:    getUploadUUID(ctx),
